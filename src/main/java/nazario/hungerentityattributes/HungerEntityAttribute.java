@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.Unique;
 public class HungerEntityAttribute implements ModInitializer {
     public static final String MOD_ID = "hunger-entity-attribute";
 
-    public static EntityAttribute MAX_HUNGER = make("max_hunger", 20, -1024, 1024);
+    public static EntityAttribute MAX_HUNGER = make("max_hunger", 20, 0, 2048);
 
     private static EntityAttribute make(final String name, final double base, final double min, final double max) {
         return new ClampedEntityAttribute("attribute.name.generic." + MOD_ID + '.' + name, base, min, max).setTracked(true);
